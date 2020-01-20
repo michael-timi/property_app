@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Property Application',
       theme: ThemeData.light().copyWith(
-        primaryColor: Color(0xFF0A0E21),
-        scaffoldBackgroundColor: Color(0xFF0A0E21),
+        primaryColor: Color(0xFF0A0E51),
+        scaffoldBackgroundColor: Color(0xFF0A0E51),
       ),
       home: SignIn(),
     );
