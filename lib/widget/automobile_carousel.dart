@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:property_app/screens/location_screen.dart';
-import 'package:property_app/models/real_estate_model.dart';
+import 'package:property_app/models/automobile_model.dart';
+import 'package:property_app/screens/automobile_screen.dart';
 
-class LocationCarousel extends StatelessWidget {
+class AutomobileCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -14,14 +13,19 @@ class LocationCarousel extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                'Top Destination',
+                'Exclusive Rides',
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.5),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => AutomobileScreen(),
+                  ),
+                ),
                 child: Container(
                   padding: EdgeInsets.all(5.0),
                   decoration: BoxDecoration(
@@ -42,30 +46,32 @@ class LocationCarousel extends StatelessWidget {
           ),
         ),
         Container(
-          height: 200,
+          height: 240,
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: locations.length,
+              itemCount: automobiles.length,
               itemBuilder: (BuildContext context, int index) {
-                Location location = locations[index];
+                Automobile automobile = automobiles[index];
                 return GestureDetector(
                   onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) => LocationScreen(
-                                location: location,
-                              ))),
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => AutomobileScreen(
+                        automobile: automobile,
+                      ),
+                    ),
+                  ),
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical:10.0, horizontal: 5.0),
-                    width: 140,
+                    margin: EdgeInsets.all(10.0),
+                    width: 180,
                     child: Stack(
                       alignment: Alignment.topCenter,
                       children: <Widget>[
                         Positioned(
-                          bottom: 5.0,
+                          bottom: 0.0,
                           child: Container(
                             height: 120.0,
-                            width: 140.0,
+                            width: 180.0,
                             decoration: BoxDecoration(
                               color: Color(0xFFDBECF1),
                               borderRadius: BorderRadius.circular(20),
@@ -76,17 +82,31 @@ class LocationCarousel extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: <Widget>[
                                   Text(
-                                    '${location.activities.length} activities',
-                                    style: TextStyle(
-                                      fontSize: 15.0,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  Text(
-                                    location.agency,
+                                    automobile.name,
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontWeight: FontWeight.w600,
+                                      letterSpacing: 1.5,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 2.0,
+                                  ),
+                                  Text(
+                                    automobile.details,
                                     style: TextStyle(color: Colors.grey),
+                                  ),
+                                  SizedBox(
+                                    height: 2.0,
+                                  ),
+                                  Text(
+                                    '\N${automobile.price}',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 18,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -103,54 +123,17 @@ class LocationCarousel extends StatelessWidget {
                                     offset: Offset(0.0, 2.0),
                                     blurRadius: 6.0),
                               ]),
-                          child: Stack(
-                            children: <Widget>[
-                              Hero(
-                                tag: location.imgUrl,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  child: Image(
-                                    image: AssetImage(location.imgUrl),
-                                    height: 130.0,
-                                    width: 130.0,
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
+                          child: Hero(
+                            tag: automobile.imgUrl,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Image(
+                                image: AssetImage(automobile.imgUrl),
+                                height: 140.0,
+                                width: 160.0,
+                                fit: BoxFit.cover,
                               ),
-                              Positioned(
-                                left: 10.0,
-                                bottom: 10.0,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      location.address,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Row(children: <Widget>[
-                                      Icon(
-                                        FontAwesomeIcons.locationArrow,
-                                        size: 10.0,
-                                        color: Colors.white,
-                                      ),
-                                      SizedBox(
-                                        width: 5.0,
-                                      ),
-                                      Text(
-                                        location.state,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ]),
-                                  ],
-                                ),
-                              )
-                            ],
+                            ),
                           ),
                         )
                       ],

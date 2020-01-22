@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:property_app/automobile.dart';
+import 'package:property_app/screens/automobile.dart';
 import 'package:property_app/home.dart';
 import 'package:property_app/profile.dart';
-import 'package:property_app/real_estate.dart';
+import 'package:property_app/screens/real_estate.dart';
 
 class HomePage extends StatefulWidget {
   @override

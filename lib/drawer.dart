@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:property_app/automobile.dart';
+import 'package:property_app/screens/automobile.dart';
 import 'package:property_app/homepage.dart';
-import 'package:property_app/real_estate.dart';
+import 'package:property_app/screens/real_estate.dart';
 
-import 'event_centre.dart';
+import 'screens/event_centre.dart';
 import 'search.dart';
 
 class NavigationDrawer extends StatelessWidget {
