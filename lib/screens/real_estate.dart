@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:property_app/drawer.dart';
-import 'package:property_app/widget/asset_carousel.dart';
 import 'package:property_app/widget/asset_page_carousel.dart';
-import '../widget/location_carousel.dart';
 
 class RealEstate extends StatelessWidget {
   @override

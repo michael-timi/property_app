@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:property_app/drawer.dart';
-import 'package:property_app/widget/automobile_carousel.dart';
-import 'package:property_app/widget/automobile_page_carousel.dart';
+import 'package:property_app/widget/asset_page_carousel.dart';
 
-class Automobile extends StatelessWidget {
+class AutoMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          'MVP | Automoblie',
+          'MVP | Automobile',
           style: TextStyle(letterSpacing: 2.0),
         ),
         centerTitle: true,
@@ -28,6 +27,19 @@ class _buildAutomobile extends StatefulWidget {
 }
 
 class __buildAutomobileState extends State<_buildAutomobile> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+
+class _buildRealEstate extends StatefulWidget {
+  @override
+  __buildRealEstateState createState() => __buildRealEstateState();
+}
+
+class __buildRealEstateState extends State<_buildRealEstate> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -61,10 +73,8 @@ class __buildAutomobileState extends State<_buildAutomobile> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 15,
-            ),
-            AutomobilePageCarousel(),
+            SizedBox(height: 20.0),
+            AssetPageCarousel(),
           ],
         ));
   }

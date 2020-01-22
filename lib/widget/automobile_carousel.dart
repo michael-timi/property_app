@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:property_app/models/automobile_model.dart';
+import 'package:property_app/screens/automobile.dart';
 import 'package:property_app/screens/automobile_screen.dart';
 
 class AutomobileCarousel extends StatelessWidget {
@@ -20,12 +21,14 @@ class AutomobileCarousel extends StatelessWidget {
                     letterSpacing: 1.5),
               ),
               GestureDetector(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => AutomobileScreen(),
-                  ),
-                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => AutoMobile(),
+                    ),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.all(5.0),
                   decoration: BoxDecoration(

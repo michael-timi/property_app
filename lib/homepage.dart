@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
     return <Page, WidgetBuilder>{
       Page.home: (_) => Home(),
       Page.real_estate: (_) => RealEstate(),
-      Page.automobile: (_) => Automobile(),
+      Page.automobile: (_) => AutoMobile(),
       Page.profile: (_) => Profile()
     }[_page](context);
   }
