@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:property_app/models/automobile_model.dart';
@@ -103,45 +104,48 @@ class _AutomobileScreenState extends State<AutomobileScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Row(children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Icon(
+                            FontAwesomeIcons.locationArrow,
+                            size: 15.0,
+                            color: Colors.grey,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text(
+                            widget.automobile.details,
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 20.0,
+                            ),
+                          ),
+                        ],
+                      ),
                       Icon(
-                        FontAwesomeIcons.locationArrow,
-                        size: 15.0,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        widget.automobile.details,
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 20.0,
-                        ),
-                      ),
+                        Icons.favorite_border,
+                        size: 25.0,
+                        color: Color(0xFF0A0E51),
+                      )
                     ]),
                     SizedBox(
                       height: 15,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Container(
-                          child: Text(
-                            widget.automobile.name,
-                            style: TextStyle(
-                              color: Color(0xFF0A0E51),
-                              fontSize: 30.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        Icon(
-                          Icons.favorite_border,
-                          size: 25.0,
+                    Container(
+                      child: Text(
+                        widget.automobile.name,
+                        style: TextStyle(
                           color: Color(0xFF0A0E51),
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
                         ),
-                      ],
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
                     SizedBox(
                       height: 15,

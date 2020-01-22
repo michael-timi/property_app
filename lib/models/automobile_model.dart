@@ -8,7 +8,7 @@ class Automobile {
 final List<Automobile> automobiles = [
   Automobile(
     imgUrl: 'images/car1.jpg',
-    name: '2017 Mercedes Benz (Gle class angularfront)',
+    name: '2017 Mercedes Benz (Gle class Angular Front)',
     details: '404, Great St',
     price: 100000,
   ),
