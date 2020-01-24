@@ -7,6 +7,10 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  intl: ^0.16.1
+  firebase_auth: ^0.15.1
+  cloud_firestore: ^0.12.11
+  auto_size_text: ^2.1.0
   font_awesome_flutter: ^8.5.0
   flutter:
     sdk: flutter

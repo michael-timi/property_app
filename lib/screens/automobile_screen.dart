@@ -23,7 +23,7 @@ class _AutomobileScreenState extends State<AutomobileScreen> {
             children: <Widget>[
               Container(
                 height: MediaQuery.of(context).size.height,
-                color: Color(0xFFDBECF1),
+                color: Color(0xFFDBB6DA).withOpacity(0.5),
               ),
               Positioned(
                   bottom: 20.0,
@@ -154,7 +154,7 @@ class _AutomobileScreenState extends State<AutomobileScreen> {
                       padding: EdgeInsets.all(10.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color(0xFFDBECF1),
+                        color: Color(0xFFDBB6DA).withOpacity(0.5),
                       ),
                       child: Text(
                         '\N${widget.automobile.price}',

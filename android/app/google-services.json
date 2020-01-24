@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "995499638854",
+    "firebase_url": "https://property-app-cbbd9.firebaseio.com",
+    "project_id": "property-app-cbbd9",
+    "storage_bucket": "property-app-cbbd9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995499638854:android:b5b1da60da9ba101d60a47",
+        "android_client_info": {
+          "package_name": "com.michtimiael.property_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995499638854-cbf716ng1sqrbvlupujtb0uhca9lshmf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfjp_5ODMo6kdREf4oh-J9R2ziblV5Z1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995499638854-cbf716ng1sqrbvlupujtb0uhca9lshmf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

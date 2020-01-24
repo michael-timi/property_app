@@ -46,7 +46,7 @@ class AutomobilePageCarousel extends StatelessWidget {
                             height: 120.0,
                             width: 180.0,
                             decoration: BoxDecoration(
-                              color: Color(0xFFDBECF1),
+                              color: Color(0xFFDBB6DA).withOpacity(0.5),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Padding(

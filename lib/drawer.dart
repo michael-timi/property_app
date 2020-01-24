@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:property_app/screens/automobile.dart';
-import 'package:property_app/homepage.dart';
-import 'package:property_app/screens/real_estate.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:property_app/home_widget.dart';
+import 'package:property_app/profile_widget.dart';
+import 'package:property_app/real_estate_widget.dart';
+import 'automobile_widget.dart';
 import 'screens/event_centre.dart';
 import 'search.dart';
 
@@ -33,7 +34,7 @@ class NavigationDrawer extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(),
+                    builder: (context) => HomeWidget(),
                   ));
             },
           ),
@@ -51,7 +52,7 @@ class NavigationDrawer extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => RealEstate(),
+                    builder: (context) => RealEstateWidget(),
                   ));
             },
           ),
@@ -69,7 +70,7 @@ class NavigationDrawer extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AutoMobile(),
+                    builder: (context) => AutomobileWidget(),
                   ));
             },
           ),
@@ -106,6 +107,24 @@ class NavigationDrawer extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => Search(),
+                  ));
+            },
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          NavItem(
+            title: 'Profile',
+            icon: Icon(
+              FontAwesomeIcons.user,
+              color: Color(0xFF0A0E51),
+              size: 30,
+            ),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfileWidget(),
                   ));
             },
           ),

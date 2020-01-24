@@ -33,7 +33,7 @@ class AutomobileCarousel extends StatelessWidget {
                   padding: EdgeInsets.all(5.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
-                    color: Color(0xFFDBECF1),
+                    color: Color(0xFFDBB6DA).withOpacity(0.5),
                   ),
                   child: Text(
                     'See All',
@@ -76,7 +76,7 @@ class AutomobileCarousel extends StatelessWidget {
                             height: 120.0,
                             width: 180.0,
                             decoration: BoxDecoration(
-                              color: Color(0xFFDBECF1),
+                              color: Color(0xFFDBB6DA).withOpacity(0.5),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Padding(
